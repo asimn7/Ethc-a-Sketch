@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <div id="container">
+        <div id="title"><h1>Sketch Pad</h1></div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="buttons">
+                <button onclick="changeColor('black')" type="button">Black</button>
+                <button onclick="changeColor('white')" type="button">Eraser</button>
+                <button type="button">Reset</button>
+                <button onclick="changeColor('random')" type="button">Random</button>
+            </div>
+            <div>
+                <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
+                <button type="button">Set Size</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>
