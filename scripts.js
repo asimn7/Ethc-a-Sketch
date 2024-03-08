@@ -1,7 +1,7 @@
-let color='hsl($(Math.random()*360),100%,50%)'
+let color='black'
 function boardSize(size){
     let board=document.querySelector('.board');
-    let squares=document.querySelectorAll('.board .square');
+    let squares=document.querySelectorAll('.board div');
     squares.forEach((div)=>div.remove());
 board.style.gridTemplateColumns=`repeat(${size}, 1fr)`;
 board.style.gridTemplateRows=`repeat(${size}, 1fr)`;
@@ -37,3 +37,9 @@ function colorSquare(){
 function changeColor(choice){
     color=choice;
 }
+
+function resetSketchpad(){
+    let board=document.querySelector('.board');
+    let squares=document.querySelectorAll('.board div');
+    squares.forEach((div)=>div.style.backgroundColor='white');
+    }
