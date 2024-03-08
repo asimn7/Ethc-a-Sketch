@@ -14,7 +14,7 @@ square.style.background='white';
 board.insertAdjacentElement("beforeend", square);
 }
 }
-// 'hsl($(Math.random()*360),100%,50%)'
+
 boardSize(16);
 
 function changeSize(input){
@@ -27,9 +27,13 @@ function changeSize(input){
 }
 
 function colorSquare(){
-    this.style.background=color;
+    if(color==='random'){
+       this.style.backgroundColor=`hsl(${Math.random() * 360}, 100%, 50%)`;
+    }
+    else{
+        this.style.backgroundColor=color;
+    }
 }
-
 function changeColor(choice){
     color=choice;
 }
