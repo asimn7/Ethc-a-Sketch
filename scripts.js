@@ -49,11 +49,9 @@ function resetSketchpad(){
     let squares=document.querySelectorAll('.board div');
     squares.forEach((div)=>div.style.backgroundColor='white');
     }
-
-
 document.querySelector("body").addEventListener("click",(e)=>{
     const mode=document.querySelector(".mode");
-if(e.target.tagName != 'BUTTON'){
+if(e.target.tagName != 'BUTTON' && e.target.tagName != 'INPUT'){
     click = !click;
 if(click){
     mode.textContent="Mode: Coloring";
@@ -65,4 +63,12 @@ else{
 mode.style.fontSize="20px";
 mode.style.fontStyle="italic";
 }
+});
+
+const spanInput=document.querySelector("#spanInput");
+const sliderInput=document.querySelector("#sliderInput");
+spanInput.textContent=sliderInput.value;
+sliderInput.addEventListener("input",(event)=>{
+    spanInput.textContent=event.target.value;
+    changeSize(event.target.value);
 });
