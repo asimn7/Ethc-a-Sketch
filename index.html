@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <p id="instruction">click/unclick to change mode</p>
     <div id="container">
         <div id="title"><h1>Sketch Pad</h1></div>
         <div class="mode"><p>Mode:Coloring</p></div>
@@ -21,8 +22,8 @@
                 <button onclick="resetSketchpad()" type="button"><i class="fa-solid fa-trash-arrow-up" style="color: #000000;"></i>Reset</button>
                 </div>
                 <div id="slider">
-                    <input type="text" placeholder="Size of Board" value="16" onchange="changeSize(this.value)"/>
-                    <button type="button">Set Size</button>
+                    <span id="spanInput">100</span><input id="sliderInput" type="range" min="1" max="100" value="16" steps="1"/>
+                    <p id="size">Set size</p>
                 </div>
                 
             </div>
